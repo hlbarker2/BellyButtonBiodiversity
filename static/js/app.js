@@ -19,6 +19,11 @@ function buildMetadata(sample) {
       var panelData = panel.append("p");
       panelData.text(`${key}: ${value}`);
     });
+
+    // Create Gauge plot
+    var wfreq = response['WFREQ'];
+
+    buildGauge(wfreq)
   });
 };
 
